@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import LogoIcon from './LogoIcon';
+import logoPng from '../assets/procureFlow.png';
 
 const navLinks = [
   { href: '#solutions', id: 'solutions', label: 'Solutions' },
@@ -56,7 +56,7 @@ export default function Navbar() {
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           className="flex items-center gap-2 text-primary"
         >
-          <LogoIcon className="w-7 h-7" />
+          <img src={logoPng.src ?? logoPng} alt="ProcureFlow" className="h-7 w-auto object-contain" />
           <span className="text-xl font-bold tracking-tighter font-serif">ProcureFlow</span>
         </a>
         <div className="hidden md:flex items-center gap-8 font-sans antialiased tracking-tight">
