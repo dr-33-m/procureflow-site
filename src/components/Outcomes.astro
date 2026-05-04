@@ -1,0 +1,62 @@
+---
+import { BarChart3, ShieldCheck, LockOpen } from '@lucide/astro';
+---
+
+<section class="bg-card py-32 px-8" id="outcomes">
+  <div class="max-w-screen-xl mx-auto">
+    <!-- Top area: headline + stats -->
+    <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+      <div>
+        <h2 class="font-serif text-foreground text-4xl mb-6 font-bold">Your kitchen is leaking profit. We stop it.</h2>
+        <p class="text-muted-foreground text-xl font-medium max-w-lg leading-relaxed">Industry data shows F&B operations waste 15–25% of all food produced. ProcureFlow gives you the control layer to recover it.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div class="bg-background p-8 rounded-2xl border border-border">
+          <div class="text-4xl font-extrabold text-primary mb-2">15–25%</div>
+          <p class="text-sm font-bold text-foreground uppercase tracking-wider">Food Wasted</p>
+          <p class="text-xs text-muted-foreground mt-2">Typical hotel &amp; restaurant without a procurement system.</p>
+        </div>
+        <div class="bg-background p-8 rounded-2xl border border-border">
+          <div class="text-4xl font-extrabold text-primary mb-2">&lt; 90 days</div>
+          <p class="text-sm font-bold text-foreground uppercase tracking-wider">Avg. Payback</p>
+          <p class="text-xs text-muted-foreground mt-2">Most operations recover their subscription cost within the first quarter.</p>
+        </div>
+        <div class="bg-background p-8 rounded-2xl border border-border">
+          <div class="text-4xl font-extrabold text-primary mb-2">22%</div>
+          <p class="text-sm font-bold text-foreground uppercase tracking-wider">Cost Reduction</p>
+          <p class="text-xs text-muted-foreground mt-2">Max procurement cost reduction with full system adoption.</p>
+        </div>
+        <div class="bg-background p-8 rounded-2xl border border-border">
+          <div class="text-4xl font-extrabold text-primary mb-2">$60k+</div>
+          <p class="text-sm font-bold text-foreground uppercase tracking-wider">Annual Savings</p>
+          <p class="text-xs text-muted-foreground mt-2">For a mid-size hotel on $300k F&amp;B spend at 20% recovery.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-background p-10 rounded-2xl shadow-sm border border-border">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+          <BarChart3 class="w-7 h-7 text-primary" />
+        </div>
+        <h4 class="font-serif text-[1.5rem] leading-8 text-foreground font-bold mb-3">Stop Over-ordering</h4>
+        <p class="text-muted-foreground font-medium leading-relaxed">Shopping lists built from real usage data cut 5–15% of procurement spend by eliminating duplicate orders.</p>
+      </div>
+      <div class="bg-background p-10 rounded-2xl shadow-sm border border-border">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+          <ShieldCheck class="w-7 h-7 text-primary" />
+        </div>
+        <h4 class="font-serif text-[1.5rem] leading-8 text-foreground font-bold mb-3">Catch Supplier Errors</h4>
+        <p class="text-muted-foreground font-medium leading-relaxed">Verified receiving catches under-deliveries and invoice mismatches, recovering 1–5% of procurement spend.</p>
+      </div>
+      <div class="bg-background p-10 rounded-2xl shadow-sm border border-border">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+          <LockOpen class="w-7 h-7 text-primary" />
+        </div>
+        <h4 class="font-serif text-[1.5rem] leading-8 text-foreground font-bold mb-3">Close the Theft Gap</h4>
+        <p class="text-muted-foreground font-medium leading-relaxed">Station issuance tracking with user-level logs eliminates internal leakage—saving 2–8% that vanishes without a digital trail.</p>
+      </div>
+    </div>
+  </div>
+</section>

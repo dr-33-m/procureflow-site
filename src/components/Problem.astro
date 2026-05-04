@@ -1,0 +1,54 @@
+---
+import { TrendingDown, Package, CalendarX } from '@lucide/astro';
+---
+
+<section class="bg-[#1e2028] text-white py-32 px-8 overflow-hidden relative" id="solutions">
+  <div class="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <span class="font-sans text-[#ffb691] font-bold uppercase tracking-widest mb-6 block text-[0.625rem]">The Cost of Blind Spots</span>
+      <h2 class="font-serif text-[3.5rem] leading-tight mb-8 font-bold text-white">Your profit is evaporating in the prep station.</h2>
+      <div class="space-y-10">
+        <div class="flex gap-6 items-start">
+          <div class="w-14 h-14 shrink-0 bg-red-900/50 rounded-xl flex items-center justify-center">
+            <TrendingDown class="w-7 h-7 text-[#ffb691]" />
+          </div>
+          <div>
+            <h4 class="font-serif text-[1.5rem] leading-8 text-white font-bold mb-2">Over-ordering</h4>
+            <p class="text-slate-300 font-sans text-base leading-relaxed">Buying what you already have because nobody checked the back of the walk-in.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="w-14 h-14 shrink-0 bg-red-900/50 rounded-xl flex items-center justify-center">
+            <Package class="w-7 h-7 text-[#ffb691]" />
+          </div>
+          <div>
+            <h4 class="font-serif text-[1.5rem] leading-8 text-white font-bold mb-2">Missing Stock</h4>
+            <p class="text-slate-300 font-sans text-base leading-relaxed">Shrinkage and "lost" inventory that eats your margin before the first plate is served.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="w-14 h-14 shrink-0 bg-red-900/50 rounded-xl flex items-center justify-center">
+            <CalendarX class="w-7 h-7 text-[#ffb691]" />
+          </div>
+          <div>
+            <h4 class="font-serif text-[1.5rem] leading-8 text-white font-bold mb-2">Spoilage &amp; Waste</h4>
+            <p class="text-slate-300 font-sans text-base leading-relaxed">High-value ingredients expiring because they weren't rotated or tracked.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="bg-white/5 p-12 rounded-3xl backdrop-blur-md border border-white/10 shadow-2xl">
+        <div class="space-y-6">
+          <div class="h-5 w-3/4 bg-[#ffb691]/20 rounded-full"></div>
+          <div class="h-5 w-full bg-[#ffb691]/30 rounded-full"></div>
+          <div class="h-5 w-5/6 bg-[#ffb691]/40 rounded-full"></div>
+          <div class="mt-12 text-center">
+            <p class="text-[2rem] leading-[2.5rem] font-extrabold text-[#ffb691] tracking-tight">Lack of Accountability</p>
+            <p class="mt-4 text-slate-300 font-sans font-medium text-base leading-relaxed">Without a digital trail, you're just guessing who did what and when.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

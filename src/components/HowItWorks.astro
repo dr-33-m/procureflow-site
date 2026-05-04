@@ -1,0 +1,65 @@
+---
+import { FilePen, Truck, Warehouse, ChefHat } from '@lucide/astro';
+---
+
+<section class="max-w-screen-xl mx-auto px-8 py-32" id="how-it-works">
+  <div class="text-center mb-16">
+    <h2 class="font-serif text-[2rem] leading-[2.5rem] text-primary font-bold">The Precision Stream</h2>
+    <p class="font-sans text-lg font-medium text-muted-foreground mt-2 max-w-2xl mx-auto">A seamless loop of control from dock to station.</p>
+  </div>
+
+  <div class="relative flex flex-col gap-10">
+    <!-- Progress line -->
+    <div class="absolute left-6 top-10 bottom-10 w-2 bg-accent rounded-full overflow-hidden">
+      <div class="w-full h-3/4 bg-primary rounded-full"></div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="flex gap-6 items-start relative z-10 pl-16">
+      <div class="absolute left-4 top-2 w-6 h-6 rounded-full bg-card border-4 border-primary shadow-lg"></div>
+      <div class="bg-card border border-border p-8 rounded-2xl flex-1 shadow-sm">
+        <div class="flex items-center gap-4 mb-4">
+          <FilePen class="w-6 h-6 text-primary" />
+          <h3 class="font-serif text-[1.5rem] leading-8 text-foreground font-bold">1. Plan what you need</h3>
+        </div>
+        <p class="font-sans text-muted-foreground font-medium text-lg">Create shopping lists that reflect exactly what your kitchen requires based on usage.</p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex gap-6 items-start relative z-10 pl-16">
+      <div class="absolute left-4 top-2 w-6 h-6 rounded-full bg-card border-4 border-primary shadow-lg"></div>
+      <div class="bg-card border border-border p-8 rounded-2xl flex-1 shadow-sm">
+        <div class="flex items-center gap-4 mb-4">
+          <Truck class="w-6 h-6 text-primary" />
+          <h3 class="font-serif text-[1.5rem] leading-8 text-foreground font-bold">2. Receive with accountability</h3>
+        </div>
+        <p class="font-sans text-muted-foreground font-medium text-lg">Log every delivery and ensure what you ordered is what you actually received.</p>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex gap-6 items-start relative z-10 pl-16">
+      <div class="absolute left-4 top-2 w-6 h-6 rounded-full bg-card border-4 border-primary shadow-lg"></div>
+      <div class="bg-card border border-border p-8 rounded-2xl flex-1 shadow-sm">
+        <div class="flex items-center gap-4 mb-4">
+          <Warehouse class="w-6 h-6 text-primary" />
+          <h3 class="font-serif text-[1.5rem] leading-8 text-foreground font-bold">3. Track inventory in real time</h3>
+        </div>
+        <p class="font-sans text-muted-foreground font-medium text-lg">Know exactly what's in your pantry, what's running low, and what's going to waste.</p>
+      </div>
+    </div>
+
+    <!-- Step 4 (upcoming) -->
+    <div class="flex gap-6 items-start relative z-10 pl-16 opacity-60">
+      <div class="absolute left-4 top-2 w-6 h-6 rounded-full bg-card border-4 border-accent"></div>
+      <div class="bg-secondary p-8 rounded-2xl flex-1">
+        <div class="flex items-center gap-4 mb-4">
+          <ChefHat class="w-6 h-6 text-muted-foreground" />
+          <h3 class="font-serif text-[1.5rem] leading-8 text-muted-foreground font-bold">4. Issue to stations with control</h3>
+        </div>
+        <p class="font-sans text-muted-foreground font-medium text-lg">Track how stock moves from storage to kitchen stations—eliminating prep blind spots.</p>
+      </div>
+    </div>
+  </div>
+</section>

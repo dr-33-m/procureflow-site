@@ -1,0 +1,61 @@
+---
+import { Fingerprint, History } from '@lucide/astro';
+---
+
+<section class="bg-primary text-primary-foreground py-32 px-8">
+  <div class="max-w-screen-xl mx-auto">
+    <div class="flex flex-col md:flex-row gap-20 items-center">
+      <div class="md:w-1/2">
+        <span class="font-sans text-primary-fixed font-black uppercase tracking-[0.2em] mb-6 block text-[0.625rem]">Absolute Accountability</span>
+        <h2 class="font-serif text-5xl mb-8 leading-tight font-extrabold">Every action has a name. Every item has a history.</h2>
+        <p class="text-primary-fixed text-xl font-medium mb-12 leading-relaxed opacity-90">Stop the guessing games. Our platform logs the "Who, What, and When" of every movement, from the loading dock to the waste bin.</p>
+        <div class="space-y-8">
+          <div class="flex gap-6 items-center group">
+            <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-all">
+              <Fingerprint class="w-7 h-7 text-white" />
+            </div>
+            <p class="font-bold text-lg">User-level logging for all inventory adjustments.</p>
+          </div>
+          <div class="flex gap-6 items-center group">
+            <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-all">
+              <History class="w-7 h-7 text-white" />
+            </div>
+            <p class="font-bold text-lg">Point-in-time snapshots for accurate financial audits.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:w-1/2">
+        <div class="bg-white/10 p-10 rounded-[2.5rem] border border-white/20 backdrop-blur-xl shadow-2xl">
+          <div class="flex justify-between items-center mb-10 pb-6 border-b border-white/10">
+            <span class="font-sans font-black tracking-widest text-primary-fixed text-xs">ACTIVITY LOG</span>
+            <span class="text-xs font-black px-2 py-1 bg-tertiary-fixed text-primary rounded-md">LIVE</span>
+          </div>
+          <div class="space-y-8">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-lg font-black text-white">12 cases Beef Ribeye received</p>
+                <p class="text-sm font-bold text-primary-fixed opacity-80">Chipo Moyo &bull; Pantry 1</p>
+              </div>
+              <span class="text-xs font-bold text-primary-fixed">2m ago</span>
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-lg font-black text-white">3 cases Tomatoes issued</p>
+                <p class="text-sm font-bold text-primary-fixed opacity-80">Fadzai Ncube &bull; Kitchen 2</p>
+              </div>
+              <span class="text-xs font-bold text-primary-fixed">15m ago</span>
+            </div>
+            <div class="flex justify-between items-start p-4 bg-error-container rounded-2xl">
+              <div>
+                <p class="text-lg font-black text-on-error-container">Out of Stock Alert: Scallops</p>
+                <p class="text-sm font-bold text-on-error-container/70">Automatic System Alert</p>
+              </div>
+              <span class="text-xs font-black text-on-error-container">1h ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
