@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro'
 ---
 
 <!doctype html>
@@ -14,6 +15,7 @@ import '../styles/global.css';
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
 		<title>ProcureFlow | Stop losing money in your kitchen.</title>
+		<Analytics />
 	</head>
 	<body>
 		<slot />
