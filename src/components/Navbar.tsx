@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
-import logoPng from '../assets/procureFlow.png';
+import { useState, useEffect } from "react";
+import logoSvg from "../assets/procureflow2.svg";
 
 const navLinks = [
-  { href: '#solutions', id: 'solutions', label: 'Solutions' },
-  { href: '#how-it-works', id: 'how-it-works', label: 'How It Works' },
-  { href: '#outcomes', id: 'outcomes', label: 'Outcomes' },
-  { href: '#pricing', id: 'pricing', label: 'Pricing' },
+  { href: "#solutions", id: "solutions", label: "Solutions" },
+  { href: "#how-it-works", id: "how-it-works", label: "How It Works" },
+  { href: "#outcomes", id: "outcomes", label: "Outcomes" },
+  { href: "#pricing", id: "pricing", label: "Pricing" },
 ];
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState('solutions');
+  const [activeSection, setActiveSection] = useState("solutions");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function Navbar() {
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         if (visible.length > 0) setActiveSection(visible[0].target.id);
       },
-      { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 },
     );
 
     navLinks.forEach(({ id }) => {
@@ -29,35 +29,49 @@ export default function Navbar() {
     });
 
     const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     const target = document.querySelector(href);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 border-b border-border transition-all duration-300 ${
-        scrolled ? 'bg-background/90 backdrop-blur-xl shadow-sm' : 'bg-background/60 backdrop-blur-md'
+        scrolled
+          ? "bg-background/90 backdrop-blur-xl shadow-sm"
+          : "bg-background/60 backdrop-blur-md"
       }`}
     >
       <div className="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto">
         <a
           href="/"
-          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="flex items-center gap-2 text-primary"
         >
-          <img src={logoPng.src ?? logoPng} alt="ProcureFlow" className="h-7 w-auto object-contain" />
-          <span className="text-xl font-bold tracking-tighter font-serif">ProcureFlow</span>
+          <img
+            src={logoSvg.src ?? logoSvg}
+            alt="ProcureFlow"
+            className="h-7 object-contain"
+          />
+          <span className="text-xl font-bold tracking-tighter font-serif">
+            ProcureFlow
+          </span>
         </a>
         <div className="hidden md:flex items-center gap-8 font-sans antialiased tracking-tight">
           {navLinks.map((link) => {
@@ -68,13 +82,15 @@ export default function Navbar() {
                 href={link.href}
                 onClick={(e) => handleClick(e, link.href)}
                 className={`relative pb-1 font-semibold text-sm transition-colors duration-300 ${
-                  isActive ? 'text-primary' : 'text-foreground hover:text-primary'
+                  isActive
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
                 }`}
               >
                 {link.label}
                 <span
                   className={`absolute bottom-0 left-0 h-0.5 bg-primary rounded-full transition-all duration-300 ${
-                    isActive ? 'w-full' : 'w-0'
+                    isActive ? "w-full" : "w-0"
                   }`}
                 />
               </a>
